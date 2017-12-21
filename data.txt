@@ -1,0 +1,10 @@
+[{
+  "Id" : 1,
+  "Name": "Adesh",
+  "Salary": 10000
+},
+{
+  "Id" : 2,
+  "Name": "Abhishek",
+  "Salary": 20000
+}]

@@ -1,0 +1,34 @@
+<div ng-controller="testController" class="container">
+
+    <div class="jumbotron text-center">
+        <h1>My first Angular + node App</h1>
+    </div>
+
+    <!-- TODO LIST -->
+    <div id="todo-list" class="row">
+        <h3><span class="label label-success">Selected Employee : {{ selectedEmployee }}</span><h3>
+
+        <div>
+            <a class="btn btn-primary" ng-click="getAllEmployee()">Get All Employee</a>
+            <a class="btn btn-default" ng-click="getAllEmployeeByName()">Get Employee By Name</a>
+            <!--<button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>-->
+        </div>
+                
+        <div class="col-sm-4 col-sm-offset-4">
+            <!-- LOOP OVER -->
+            <div ng-repeat="emp in employees">
+                <div>
+                    <label>{{ emp.Id }} </label>
+                    <label>{{ emp.Name }} </label>
+                    <label>{{ emp.Salary }} </label>
+                    <a ng-click="getAllEmployeeById(emp.Id)">
+                        <span role="button" class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                    <!--<button type="button" ng-click="getAllEmployeeById(emp.Id)">
+                        <span role="button" class="glyphicon glyphicon-pencil"></span>
+                    </button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div ng-controller="testController" class="container">    
+    <div class="row">        
+		<a class="btn btn-info" ng-click="getTextFileData()">Get File Data</a>
+		<div class="col-sm-6 col-sm-offset-3 marginTop15">
+            <div class="col-sm-offset-8 col-sm-4">
+                <a class="btn btn-primary" href="#/employeeDetail/add">Add New Employee</a>
+            </div>
+            <!-- LOOP OVER -->            
+                    <div ng-repeat="emp in empData">
+                        <td>{{ emp.Id }} </td>
+                        <td>{{ emp.Name }} </td>
+                        <td>{{ emp.Salary }} </td>
+                        <td>
+                            <a href="#/employeeDetail/view/{{emp.Id}}">
+                                <span role="button" class="glyphicon glyphicon-file"></span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#/employeeDetail/edit/{{emp.Id}}">
+                                <span role="button" class="glyphicon glyphicon-edit"></span>
+                            </a>
+                        </td>
+                        <td>
+                            <a ng-click="deleteEmployee(emp.Id)">
+                                <span role="button" class="glyphicon glyphicon-remove"></span>
+                            </a>
+                        </td>
+                        
+                    </div>         
+        </div>
+    </div>
+</div>
